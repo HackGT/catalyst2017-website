@@ -52,17 +52,51 @@ abbr {
 #first-page::after {
 	content: "\25BC";
 	font-size: 1.3em;
-    color: white;
+    color: black;
     font-weight: bold;
     position: absolute;
-    bottom: 5px;
+    bottom: 7px;
     width: 24px;
     left: calc(50% - 12px);
-	/*animation: pulse 3s ease-in-out;*/
-	animation-iteration-count: infinite; 
+	animation: font-scale 1.5s ease-in-out;
+	animation-iteration-count: infinite;
+	/*animation-direction: alternate;*/
     opacity: 0.5;
 	transition: opacity 0.5s;
 }
+
+@keyframes font-scale {
+  0% {
+    bottom: 7px;
+  }
+
+  20% {
+  	bottom: 7px;
+  }
+
+  35% {
+    bottom: 12px;
+  }
+
+  50% {
+  	bottom: 2px;
+  }
+
+  65% {
+    bottom: 12px;
+  }
+
+  80% {
+  	bottom: 2px;
+  }
+
+  95% {
+  	bottom: 7px;
+  }
+
+
+}
+
 #first-page.hide-scroll-indicator::after {
 	animation: none;
 	opacity: 0;
@@ -219,6 +253,7 @@ section > h1 {
 h3.details {
 	font-size: 2em;
 	letter-spacing: 1px;
+	margin-bottom: 0;
 }
 #faq li > strong {
 	letter-spacing: 1px;
@@ -295,7 +330,7 @@ h3.details {
 }
 
 a:link {
-    color: #f1c40f;
+    color: #D1B6E1;
 }
 
 a:visited {
