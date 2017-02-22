@@ -1,86 +1,185 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Catalyst: Computer Science Learnathon | HackGT</title>
-    <link rel="shortcut icon" href="/assets/favicon.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Header -->
-    <svg class="header" viewbox="0 0 200 33">
-      <defs>
-        <mask id="mask" x="0" y="0" width="200" height="20">
-          <rect x="0" y="0" width="200" height="40" fill="#fff"/>
-          <text text-anchor="middle" font-family="OneDay" y="20" x="100" dy="-.3em">Catalyst</text>
-        </mask>
-      </defs>
-      <rect width="200" height="19" mask="url(#mask)" fill="#4A4949FF"/>
-      <rect y="22.5" width="200" height="1" fill="#4A4949FF"/>
-      <rect y="27" width="200" height="1" fill="#4A4949FF"/>
-      <rect y="31.5" width="200" height="1" fill="#4A4949FF"/>
-    </svg>
-    <!-- Padding to give the header space -->
-    <svg viewbox="0 0 200 33"></svg>
+<html lang="en">
+	<head>
+		<title>Catalyst</title>
+		<meta charset="utf-8" />
+		<meta property="og:title" content="Catalyst" />
+		<!-- <meta property="og:image" content="https://teeny.hackgt.com/assets/preview.png" /> -->
+		<!-- <meta property="og:url" content="https://teeny.hackgt.com/" /> -->
+		<meta property="og:description" content="HackGTeeny is an annual hackathon oriented towards beginner hackers at Georgia Tech. Learn the basics of hacking with our workshops, get paired with a mentor to help you with your hack, and win awesome prizes!" />
+		<meta name="theme-color" content="#CCFFED" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+		<base target="_blank" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+	</head>
+	<body>
+		<header id="first-page">
+			<div id="applyPage"></div>
+			<h3 class="details">
+				April 15th, 2017
+				<br />
+				9 AM - 9 PM
+			</h3>
+		</header>
+		<hr />
+		<section id="info">
+			<object data="./assets/triangle-glyph.svg" type="image/svg+xml" class="glyph" id="triangle"></object>
+			<h1>Info</h1>
+			<p>Catalyst is a free, 12-hour event held on Saturday April 15th from 9AM to 9PM, where metro Atlanta high school students will explore technology and learn from mentors at Georgia Tech and our sponsors.<p>
+		</section>
+		<section id="schedule">
+			<object data="./assets/hex2-glyph.svg" type="image/svg+xml" class="glyph left" id="hex2"></object>
+			<h1>Schedule</h1>
+			<table>
+				<thead>
+					<tr>
+						<td colspan="2">Saturday, April 15th</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>8:00 AM</td>
+						<td>Check-In & Breakfast</td>
+					</tr>
+					<tr>
+						<td>9:00 AM</td>
+						<td>Event Starts</td>
+					</tr>
+					<tr>
+						<td>9:00 AM</td>
+						<td>Session I</td>
+					</tr>
+					<tr>
+						<td>1:00 PM</td>
+						<td>Lunch</td>
+					</tr>
+					<tr>
+						<td>1:00 PM</td>
+						<td>Session II</td>
+					</tr>
+					<tr>
+						<td>7:00 PM</td>
+						<td>Dinner</td>
+					</tr>
+					<tr>
+						<td>7:00 PM</td>
+						<td>Final Session</td>
+					</tr>
+					<tr>
+						<td>9:00 PM</td>
+						<td>Closing</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="faq">
+			<object data="./assets/circle-glyph.svg" type="image/svg+xml" class="glyph" id="circle"></object>
+			<h1>Frequently Asked Questions</h1>
+			<ul>
+				<li>
 
-    <!-- Information -->
-    <div class="container animated fadeIn">
+					<strong>Should I bring anything?</strong>
+					<p>Nope! We will provide food for every participant and laptops for every team. Our sponsors will also have some free swag for you to take home!</p>
+				</li>
+				<li>
+					<strong>How do we get there?</strong>
+					<p>We’ll provide busses to select schools as well as MARTA passes for everyone. The event will be in the Klaus Advanced Computing Building at Georgia Tech</p>
+					<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBaq9p4faIW-bSuVvK42uO1zOHfhkimRy8&q=Clough+Undergraduate+Learning+Commons,+Atlanta,+GA" allowfullscreen></iframe>
+				</li>
+				<li>
+					<strong>What about parking?</strong>
+					<p>If you require it, parking will be provided.  Let us know on your application and we will give you more information!</p>
+				</li>
+				<li>
+					<strong>Are parents allowed to come?</strong>
+					<p>Although we are grateful for parental support, this is a student-only event from check-in on.</p>
+				</li>
 
-      <img class="logo" src="/assets/svg/icon.svg" />
+			</ul>
+		</section>
+		<section id="sponsors">
+			<object data="./assets/hex1-glyph.svg" type="image/svg+xml" class="glyph left" id="hex1"></object>
+			<h1>Made Possible By</h1>
+			<div class="sponsor-group">
+				<div class="sponsor">
+					<a href="https://www.americanexpress.com/">
+						<img alt="American Express" title="American Express" src="//logo.clearbit.com/americanexpress.com?size=256" />
+					</a>
+					<br />
+					<strong>American Express</strong>
+				</div>
+				<div class="sponsor">
+					<a href="https://gtri.gatech.edu/">
+						<img alt="GTRI" title="GTRI" src="assets/GTRI_Logo.png" />
+					</a>
+					<br />
+					<strong>GTRI</strong>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="social">
+				<a href="https://twitter.com/thehackgt" title="Twitter" class="twitter">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="https://www.facebook.com/HackGT" title="Facebook" class="facebook">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="https://github.com/HackGT" title="GitHub" class="github">
+					<i class="fa fa-github"></i>
+				</a>
+				<a href="mailto:hello@hackgt.com" title="Email" class="email">
+					<i class="fa fa-envelope"></i>
+				</a>
+			</div>
+			<p>Made with &hearts; by the HackGT Team</p>
+		</footer>
 
-      <h1>What is this?</h1>
-      <p>
-        Catalyst is a free 12 hour LEARNATHON that gives
-        metro-Atlanta high school students an opportunity to
-        explore Computer Science and learn from mentors at
-        Georgia Tech and the industry.
-      </p>
-      <p>
-        No experience necessary! Food, computers, and t-shirts
-        will all be provided free of charge!
-      </p>
+		<script src="js/snap.svg-min.js"></script>
+		<script src="js/animate-object-path.js"></script>
+		<script src="js/svgScript.js"></script>
+		<script>
+			function isScrolledIntoView(el) {
+				var elemTop = el.getBoundingClientRect().top;
+				var elemBottom = el.getBoundingClientRect().bottom;
 
-      <h1>When &amp; Where?</h1>
-      <p>
-        When: April 15th, 2017 from 9AM to 9PM
-        <br/>
-        Where:
-        <a href="https://www.google.com/maps/place/Klaus+Advanced+Computing+Building/@33.7772515,-84.3961846,15z/data=!4m5!3m4!1s0x0:0x16eec927f37b40ec!8m2!3d33.7772515!4d-84.3961846">
-          Georgia Tech's Klaus Advanced Computing Building!
-        </a>
-        <br/>
-      </p>
+				var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+				return isVisible;
+			}
+			
+			var firstPage = document.getElementById("first-page");
+			var hideScrollIndicatorClass = "hide-scroll-indicator";
 
-      <h1>Let's do this!</h1>
-      <p>
-        Sign up to get an email when registration opens!
-        More information and a day-of schedule coming soon!
-        <div class="center">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdw5p4fRhvpqxXYZG9biVHBucG1ogc6aZ5Ld8QHm9EV33XlCA/viewform"
-            class="register-action waves-effect waves-light btn"
-          >
-            Stay Updated!
-          </a>
-        </div>
-      </p>
+			var sections = ["first-page", "info", "schedule", "faq", "sponsors"].map(function (id) {
+				return document.getElementById(id);
+			});
+			var colors = ["#F7FFFC", "#CCFFED", "#A5DFF9", "#D1B6E1", "#D1B6E1"];
 
-    </div>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-64687964-3', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
-  </body>
+			document.addEventListener("scroll", function (event) {
+				if (window.scrollY !== 0) {
+					firstPage.classList.add(hideScrollIndicatorClass);
+					for (var i = 0; i < sections.length; i++) {
+						if (isScrolledIntoView(sections[i])) {
+							document.body.style.backgroundColor = colors[i];
+							// if (i != 0)
+							// 	document.body.style.color = colors[0]
+							// else
+							// 	document.body.style.color = "#000000"
+						}
+					}
+				}
+				else {
+					firstPage.classList.remove(hideScrollIndicatorClass);
+					document.body.style.backgroundColor = colors[0];
+					// document.body.style.color = "#000000"
+				}
+			});
+		</script>
+	</body>
 </html>
