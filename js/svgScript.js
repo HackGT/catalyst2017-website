@@ -8,7 +8,7 @@
 // });
 
 var animationMap = {}
-
+var originalBoundingBox = {};
 
 
 
@@ -26,6 +26,8 @@ Snap.load('./assets/catalyst.svg', function(frag) {
     svgElementClone = svgElement
 
     var arr = svgElementClone.node.children[0].children;
+
+
 
     // console.log(svgElementClone.node.children[0].children)
 
@@ -59,6 +61,8 @@ Snap.load('./assets/catalyst.svg', function(frag) {
 
     })
 
+    originalBoundingBox = paper.select("#allLetters").getBBox()
+
     resize()
 
 })
@@ -66,21 +70,41 @@ Snap.load('./assets/catalyst.svg', function(frag) {
 function resize() {
 
       var group = paper.select("#allLetters")
+      // console.log(group)
+      // console.log(group.node)
       // // console.log(group.getBBox().w)
       // console.log(paper.attr('width'))
       // console.log(group.getBBox())
-      var dx = (paper.attr('width') - group.getBBox().w)/2
-      var dy = (paper.attr('height') - group.getBBox().h)/2
+      // b && group.transform("T")
+      console.log(group.getBBox().w, originalBoundingBox.w)
+      console.log(paper.attr('width'), window.innerWidth)
+      // var dx = (paper.attr('width') - group.getBBox().w)/2
+      // var dy = (paper.attr('height') - group.getBBox().h)/2
+      var dx = (paper.attr('width') - originalBoundingBox.w)/2
+      var dy = (paper.attr('height') - originalBoundingBox.h)/2
       // console.log(dx, dy)
-      var scaleFactor = Math.min(paper.attr('width') / group.getBBox().w, paper.attr('height') / group.getBBox().h)*.9
+      // var scaleFactor = Math.min(paper.attr('width') / group.getBBox().w, paper.attr('height') / group.getBBox().h)*.9
+      var scaleFactor = Math.min(paper.attr('width') / originalBoundingBox.w, paper.attr('height') / originalBoundingBox.h)*.9
       // console.log(scaleFactor)
       group.transform("T" + dx + "," + dy+"s" + scaleFactor + "," + scaleFactor)  
 
 
 }
 
+
+
 window.onresize = function() {
+  // console.log("AAAA")
+  paper.attr('width', window.innerWidth)
+  paper.attr('height', window.innerHeight)
   resize()
+  // console.log(window.innerWidth)
+  // paper.attr({
+  //   width: window.innerWidth,
+  //   height: window.innerHeight
+  // });
+
+
 }
 
 function random(min, max) {
