@@ -115,21 +115,33 @@ section {
 	position: relative;
 }
 
-@media screen and (min-width: 50em) {
 
+
+
+@media screen and (max-height: 360px) {
+
+	#info {
+		margin-top: 4em;
+	}
+
+
+}
+
+@media screen and (min-width: 50em) {
+/*
 	section {
 		margin: 0 10vw;
-	}
+	}*/
 
 	.glyph {
 		position: absolute;
-		right: 5vw;
+		right: 4vw;
 		width: 10vw;
 
 	}
 
 	.left {
-		left: 5vw;
+		left: 4vw;
 	}
 
 
