@@ -363,7 +363,8 @@ a:active {
     color: yellow;
 }*/
 
-button {
+.button {
+	display: inline-block;
 	padding: .5em;
 	border: 1px outset black;
 	background-color: rgba(255, 255, 255,0);
@@ -382,7 +383,7 @@ button {
 
 }
 
-button:after{
+.button::after {
 	content: "";
 	/*height: 100%;*/
 	/*width: 100%;*/
@@ -396,37 +397,37 @@ button:after{
 	z-index: 0;
 }
 
-button:hover:after{
+.button:hover::after {
 	left: 0;
 }
 
-button:hover > h3 > a:link{
+.button:hover > h3 > a:link {
 	color: white;
 }
 
-button:hover > h3 > a:visited{
+.button:hover > h3 > a:visited {
 	color: white;
 }
 
-button > h3 {
+.button > h3 {
 	font-size: 2em;
 	padding: 0;
 	margin: 0;
 }
 
-button > h3 > a {
+.button > h3 > a {
 	position: relative;
 	color: black;
 	z-index: 1;
 	transition: 0.5s all;
 }
 
-button > h3 > a:link {
+.button > h3 > a:link {
 	color: black;
 	z-index: 1;
 }
 
-button > h3 > a:visited {
+.button > h3 > a:visited {
 	color: black;
 	z-index: 1;
 }
