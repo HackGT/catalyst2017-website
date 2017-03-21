@@ -336,17 +336,19 @@ h3.details {
 }
 .sponsor {
 	display: inline-block;
-	width: 128px;
-    height: 180px;
+	max-width: 128px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
 	padding: 0 20px;
 	transform: scale(1);
     transition: .3s;
 }
 .wide-sponsor {
-    width: 480px;
+    max-width: 480px;
 }
 .medium-sponsor {
-    width: 360px;
+    max-width: 360px;
 }
 .sponsor:hover {
 	transform: scale(1.05);
