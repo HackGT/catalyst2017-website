@@ -345,6 +345,9 @@ h3.details {
 .wide-sponsor {
     width: 480px;
 }
+.medium-sponsor {
+    width: 360px;
+}
 .sponsor:hover {
 	transform: scale(1.05);
 }
