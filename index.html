@@ -166,41 +166,48 @@
 				</div>
 			</div>
 			<div class="sponsor-group">
-				<div class="sponsor medium-sponsor">
-					<a href="http://github.com/">
-						<img alt="GitHub" title="GitHub" src="assets/GitHub_Logo.png" />
+				<div class="sponsor">
+					<a href="http://palantir.com/">
+						<img alt="Palantir" title="Palantir" src="assets/palantir-logo.png" />
 					</a>
 					<br />
 				</div>
-				<div class="sponsor wide-sponsor">
-					<a href="http://palantir.com/">
-						<img alt="Palantir" title="Palantir" src="assets/palantir-logo.png" />
+				<div class="sponsor">
+					<a href="http://github.com/">
+						<img alt="GitHub" title="GitHub" src="assets/GitHub_Logo.png" />
 					</a>
 					<br />
 				</div>
 			</div>
 			<div class="sponsor-group">
 				<div class="sponsor">
-					<a href="http://www.caterwiththreesisters.com/">
-						<img alt="3 Sisters Catering" title="3 Sisters Catering" src="assets/3-sisters.png" />
-					</a>
-					<br />
-				</div>
-				<div class="sponsor wide-sponsor">
-					<a href="http://www.itsmarta.com/">
-						<img alt="MARTA" title="MARTA" src="assets/marta-logo.png" />
-					</a>
-					<br />
-				</div>
-			</div>
-			<div class="sponsor-group">
-				<div class="sponsor medium-sponsor">
 					<a href="http://google.com/">
 						<img alt="Google" title="Google" src="assets/google-logo.png" />
 					</a>
 					<br />
 				</div>
+				<div class="sponsor">
+					<a href="http://makeschool.com/">
+						<img alt="MakeSchool" title="MakeSchool" src="assets/makeschool-logo.png" />
+					</a>
+					<br />
+				</div>
 			</div>
+			<div class="sponsor-group">
+				<div class="sponsor">
+					<a href="http://www.itsmarta.com/">
+						<img alt="MARTA" title="MARTA" src="assets/marta-logo.png" />
+					</a>
+					<br />
+				</div>
+				<div class="sponsor">
+					<a href="http://www.caterwiththreesisters.com/">
+						<img alt="3 Sisters Catering" title="3 Sisters Catering" src="assets/3-sisters.png" />
+					</a>
+					<br />
+				</div>
+			</div>
+
 		</section>
 		<footer>
 			<div class="social">
@@ -226,7 +233,8 @@
 				var elemTop = el.getBoundingClientRect().top;
 				var elemBottom = el.getBoundingClientRect().bottom;
 
-				var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+				var isVisible = (elemTop <= 0) && (elemBottom <= window.innerHeight);
+				console.log(el.id, isVisible)
 				return isVisible;
 			}
 
@@ -236,9 +244,10 @@
 			var sections = ["first-page", "info", "schedule", "faq", "sponsors"].map(function (id) {
 				return document.getElementById(id);
 			});
-			var colors = ["#F7FFFC", "#CCFFED", "#A5DFF9", "#D1B6E1", "#D1B6E1"];
+			var colors = ["#F7FFFC", "#CCFFED", "#A5DFF9", "#D1B6E1", "#A5DFF9",];
 
-			document.addEventListener("scroll", function (event) {
+			function updateColor() {
+				console.log("yep");
 				if (window.scrollY !== 0) {
 					firstPage.classList.add(hideScrollIndicatorClass);
 					for (var i = 0; i < sections.length; i++) {
@@ -256,7 +265,20 @@
 					document.body.style.backgroundColor = colors[0];
 					// document.body.style.color = "#000000"
 				}
+			}
+
+			document.addEventListener("scroll", function (event) {
+				updateColor();
 			});
+
+			updateColor();
+
+			//so when the 
+			// updateColor();
+			// if (window.scrollY != 0) {
+			// 	console.log("hi")
+			// 	window.scrollTo(0, 0);
+			// }
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
